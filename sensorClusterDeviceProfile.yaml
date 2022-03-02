@@ -1,0 +1,26 @@
+name: "SensorCluster"
+manufacturer: "Raspberry Pi Foundation"
+model: "Raspberry Pi 3b+"
+labels:
+  - "rpi"
+description: "Sensor data for temperature and humidity"
+
+deviceResources:
+      -
+        name: temperature
+        description: "Temperature sensor data"
+        properties:
+            value:
+             { type: "Int64", readWrite: "RW", minimum: "-50", maximum: "100", size: "4", LSB: "true", defaultValue: "9"}
+      -
+        name: humidity
+        description: "Humidity sensor data"
+        properties:
+            value:
+             { type: "Int64", readWrite: "RW", minimum: "0", maximum: "100", size: "4", LSB: "true", defaultValue: "9"}
+      -
+        name: power
+        description: "Power sensor data"
+        properties:
+            value:
+             { type: "String", readWrite: "RW", minimum: "0", maximum: "200", size: "4", LSB: "true", defaultValue: "9"}      
